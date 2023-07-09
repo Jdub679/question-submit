@@ -1,0 +1,17 @@
+{
+  "javascriptQ": [
+    {
+      "question": "What is a hook?",
+      "answer": "React Hooks are simple JavaScript functions that we can use to isolate the reusable part from a functional component. Hooks can be stateful and can manage side-effects. React provides a bunch of standard in-built hooks: useState : To manage states. Returns a stateful value and an updater function to update it.",
+      "extra": ""
+    },
+    {
+      "question": "What are the purpose of req/res when routing?",
+      "answer": "Req is a request from the user and res is the response from the server",
+      "extra": ""
+    }
+  ],
+  "cQ": [],
+  "pythonQ": [],
+  "tailwindQ": []
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+    <meta charset="utf-8">
+    <meta name="description" content="This is where your description goes">
+    <meta name="keywords" content="one, two, three">
+
+		<title>Title in the tab</title>
+
+		<!-- external CSS link -->
+		<link rel="stylesheet" href="css/normalize.css" type="text/css">
+		<link rel="stylesheet" href="css/style.css" type="text/css">
+	</head>
+	<body>
+		<header class="header">
+      <h1>Enter questions and answers</h1>
+    </header>
+    <main class="main">
+      <div class="form-container">
+        <form action="/submit" method="POST" enctype="multipart/form-data">
+          <div class="selection-type">
+            <select name="selectionType">
+              <option value="" disabled selected class="disabled">Choose a language: </option>
+              <option value="javascriptQ" class="option-type">Javascript</option>
+              <option value="tailwindQ" class="option-type">Tailwind</option>
+              <option value="pythonQ" class="option-type">Python</option>
+              <option value="cQ" class="option-type">C</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="question">Question:</label>
+            <input type="text" id="question" name="question" required>
+          </div>
+          <div class="form-group">
+            <label for="answer">Answer:</label>
+            <input type="text" id="answer" name="answer" required>
+          </div>
+          <div class="form-group">
+            <label for="extra">Extra:</label>
+            <textarea id="extra" name="extra" placeholder="Add sources here"></textarea>
+            <input type="file" name="imageFile" id="image-upload" class="custom-file-input" accept="image/*" multiple>
+            <label class="custom-file-label" for="image-upload">Add images</label>
+          </div>
+          <input type="submit" value="Submit">
+        </form>
+      </div>
+    </main>
+	</body>
+</html>

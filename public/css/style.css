@@ -1,0 +1,106 @@
+/******************************************
+/* CSS
+/*******************************************/
+
+/* Box Model Hack */
+*{
+  box-sizing: border-box;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+body {
+  margin: 0;
+  background-color: #aeacac;
+}
+.header {
+  font-size: 2rem;
+  text-align: center;
+}
+
+.main {
+  display: flex;
+  padding: 4rem;
+  justify-content: space-around;
+}
+
+.selection-type {
+  display: inline-block;
+}
+
+/* Dropdown button */
+.selection-type select {
+  background-color: #136071;
+  color: rgba(244, 240, 240, 0.715);
+  padding: 10px;
+  font-size: 1.5rem;
+  border: none;
+  cursor: pointer;
+}
+
+.disabled { 
+  color: black;
+  font-weight: 700;
+}
+
+/* Forms */
+
+.form-container {
+  max-width: 900px;
+  width: 100%;
+}
+
+.form-group {
+  margin-bottom: 20px;
+  font-size: 1.7rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+.form-group input[type="text"],
+.form-group textarea {
+  background-color: antiquewhite;
+  width: 100%;
+  padding: 10px;
+  border: 3px solid #ccc;
+  border-radius: 4px;
+}
+
+.form-group .image-upload {
+  display: block;
+  margin-top: 5px;
+}
+.form-container input[type="submit"] {
+  border: none;
+  padding: 15px;
+  border-radius: 4px;
+  background-color: #136071;
+  font-size: 2rem;
+}
+.form-group .custom-file-input {
+  visibility: hidden;
+  position: absolute;
+}
+
+.form-group .custom-file-label {
+  display: inline-block;
+  padding: 10px 15px;
+  background-color: #136071;
+  color: rgba(244, 240, 240, 0.715);
+  font-weight: 700;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.form-group .custom-file-label:hover,.form-container input[type="submit"]:hover {
+  background-color: #188ba5;
+}
+#extra {
+  height: 3.55rem;
+}
+#extra:focus::placeholder {
+  color: transparent;
+}
+.selection-type {
+  margin-bottom: 2rem;
+}
