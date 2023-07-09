@@ -12,6 +12,8 @@
 		<link rel="stylesheet" href="css/style.css" type="text/css">
 	</head>
 	<body>
+    <% if (locals.authenticated) { %>
+    
 		<header class="header">
       <h1>Enter questions and answers</h1>
     </header>
@@ -45,5 +47,17 @@
         </form>
       </div>
     </main>
+    <% } else { %>
+      <!-- Display the login form if not authenticated -->
+      <div class="login-container">
+        <form action="/login" method="POST">
+          <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+          </div>
+          <input type="submit" value="Login">
+        </form>
+      </div>
+    <% } %>
 	</body>
 </html>

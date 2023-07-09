@@ -38,9 +38,21 @@ if (!fs.existsSync(jsonFilePath)) {
 
 // Root route
 app.get('/', (req, res) => {
-  res.render('index')
+  res.render('index', { authenticated })
 });
 
+let authenticated = false
+app.post('/login', (req, res) => {
+  const password = 'anki-generator';
+  const { password: submittedPassword } = req.body;
+
+  if (submittedPassword === password) {
+    authenticated = true;
+    res.redirect('/');
+  } else {
+    res.redirect('/');
+  }
+});
 
 app.post('/submit', upload.single('imageFile'), (req, res) => {
   const { selectionType, question, answer, extra } = req.body;
